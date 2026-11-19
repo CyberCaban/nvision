@@ -1,0 +1,22 @@
+[project]
+name = "construction-ppe"
+version = "0.1.0"
+description = "Construction-site PPE detection with YOLOv8"
+requires-python = ">=3.11,<3.13"
+dependencies = ["PyYAML>=6.0.2,<7"]
+
+[project.optional-dependencies]
+vision = [
+    "matplotlib>=3.8,<4",
+    "numpy>=1.26,<3",
+    "opencv-python>=4.8,<5",
+    "pillow>=10,<14",
+    "ultralytics>=8.3.228,<9",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
